@@ -13,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(/confetti.js);
   }
   
   html {
@@ -21,6 +22,7 @@
     -webkit-text-size-adjust: none; /* for iOS Safari */
     text-size-adjust: none; /* for other mobile browsers */
     scroll-behavior: smooth;
+
   }
   
   img, picture, svg, video {
@@ -52,7 +54,7 @@
   
   .carousel{
     width: min(60%,800px);
-    height: 90%;
+    height: 80%;
     position: relative;
     box-shadow: 0px 0px 10px 3px rgba(255,255,255,0.5);
     border-radius: 10px;
@@ -89,11 +91,11 @@
   }
   
   .previous{
-    left: 1rem;
+    left: -2em;
   }
   
   .next{
-    right: 1rem;
+    left: calc(100% + 2rem);
   }
   
   .active{
@@ -103,3 +105,30 @@
   .disabled{
     opacity: 0;
   }
+
+  .pagination{
+    height: 20px;
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .pagination span{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .pagination span:hover{
+    opacity: 0.8;
+  }
+
+  .on{opacity: 1;}
+  
+  .off{opacity: 0.5;}

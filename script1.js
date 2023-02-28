@@ -1,40 +1,39 @@
 const nextBtn = document.querySelector(".next");
-
 const previousBtn = document.querySelector(".previous");
 
 nextBtn.addEventListener("click", () => {
     let currentSlide = document.querySelector(".active");
+    let currentDot = document.querySelector(".on");
     if(currentSlide.classList.contains("last")){
-        currentSlide.classList.toggle("active");
-        currentSlide.classList.toggle("disabled");
+        slideOnOff(currentSlide);
         currentSlide = document.querySelector(".first");
-        currentSlide.classList.toggle("active");
-        currentSlide.classList.toggle("disabled");
+        slideOnOff(currentSlide);
     } else{
         const currentSlide = document.querySelector(".active");
         const nextSlide = currentSlide.nextElementSibling;
-        currentSlide.classList.toggle("active");
-        currentSlide.classList.toggle("disabled");
-        nextSlide.classList.toggle("disabled");
-        nextSlide.classList.toggle("active");
+        slideOnOff(currentSlide);
+        slideOnOff(nextSlide);
     }
 });
 
 previousBtn.addEventListener("click", ()=>{
     let currentSlide = document.querySelector(".active");
     if(currentSlide.classList.contains("first")){
-        currentSlide.classList.toggle("active");
-        currentSlide.classList.toggle("disabled");
+        slideOnOff(currentSlide);
         currentSlide = document.querySelector(".last");
-        currentSlide.classList.toggle("active");
-        currentSlide.classList.toggle("disabled");
+        slideOnOff(currentSlide);
     } else{
         const currentSlide = document.querySelector(".active");
         const previousSlide = currentSlide.previousElementSibling;
-        currentSlide.classList.toggle("active");
-        currentSlide.classList.toggle("disabled");
-        previousSlide.classList.toggle("active");
-        previousSlide.classList.toggle("disabled");
+        slideOnOff(currentSlide);
+        slideOnOff(previousSlide);
     }
 });
 
+
+
+
+function slideOnOff(slide){
+    slide.classList.toggle("active");
+    slide.classList.toggle("disabled");
+};
