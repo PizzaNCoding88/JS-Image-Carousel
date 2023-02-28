@@ -1,0 +1,105 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  html {
+    color-scheme: dark light;
+    font-size: 62.5%; /*1rem=10px */
+    -webkit-text-size-adjust: none; /* for iOS Safari */
+    text-size-adjust: none; /* for other mobile browsers */
+    scroll-behavior: smooth;
+  }
+  
+  img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+  }
+  
+  menu:not(article menu),
+  ol:not(article ol),
+  ul:not(article ul) {
+      list-style: none;
+  }
+  
+  menu,
+  ol,
+  ul {
+      padding-left: 0;
+  }
+  
+  label,
+  button,
+  select,
+  summary,
+  [type=radio],
+  [type=submit],
+  [type=checkbox] {
+      cursor: pointer;
+  }
+  
+  .carousel{
+    width: 60%;
+    height: 90%;
+    position: relative;
+    box-shadow: 0px 0px 10px 3px rgba(255,255,255,0.5);
+    border-radius: 10px;
+  }
+  
+  .carousel ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute; 
+    border-radius: 10px;
+  }
+
+  .carousel li{
+    transition: 1000ms ease-in-out;
+  }
+  
+  .carousel__button{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    border: none;
+    padding: 1rem;
+    font-size: 3rem;
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+  .previous{
+    left: 1rem;
+  }
+  
+  .next{
+    right: 1rem;
+  }
+  
+  .active{
+    opacity: 1;
+  }
+  
+  .disabled{
+    opacity: 0;
+  }
