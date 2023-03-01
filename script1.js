@@ -37,3 +37,8 @@ function slideOnOff(slide){
     slide.classList.toggle("active");
     slide.classList.toggle("disabled");
 };
+
+function dotsOnOff(dot){
+    dot.classList.toggle("active");
+    dot.classList.toggle("disabled");
+}
