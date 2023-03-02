@@ -147,3 +147,14 @@
   .on{opacity: 1;}
   
   .off{opacity: 0.5;}
+
+  @media (max-width:500px ){
+    .carousel{
+      height: 50%;
+    }
+
+    .pagination{
+      bottom: -10%;
+    }
+
+  }
